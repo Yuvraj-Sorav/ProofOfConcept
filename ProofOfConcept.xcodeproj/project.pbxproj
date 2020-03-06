@@ -26,7 +26,6 @@
 		E57CE7C22410CCAF006429B8 /* DashboardViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7C12410CCAF006429B8 /* DashboardViewController+UITableViewDataSource.swift */; };
 		E57CE7C52410CD01006429B8 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7C42410CD01006429B8 /* DashboardModel.swift */; };
 		E57CE7CA2410CE66006429B8 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7C92410CE66006429B8 /* DashboardCell.swift */; };
-		E57CE7CE2410E4C3006429B8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7CD2410E4C3006429B8 /* UIView+Extension.swift */; };
 		E57CE7D124111233006429B8 /* POCNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7D024111233006429B8 /* POCNetworkManager.swift */; };
 		E57CE7D3241129E0006429B8 /* DashboardRowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7D2241129E0006429B8 /* DashboardRowsModel.swift */; };
 		E5A1592E24120E7F006CD076 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1592D24120E7F006CD076 /* Constant.swift */; };
@@ -80,7 +79,6 @@
 		E57CE7C12410CCAF006429B8 /* DashboardViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		E57CE7C42410CD01006429B8 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		E57CE7C92410CE66006429B8 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
-		E57CE7CD2410E4C3006429B8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E57CE7D024111233006429B8 /* POCNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCNetworkManager.swift; sourceTree = "<group>"; };
 		E57CE7D2241129E0006429B8 /* DashboardRowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRowsModel.swift; sourceTree = "<group>"; };
 		E5A1592D24120E7F006CD076 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				E5A1592F24121541006CD076 /* Resources */,
 				E5A1592C24120E5C006CD076 /* Constant */,
 				E57CE7CF241111F4006429B8 /* NetworkManager */,
-				E57CE7CB2410E4A9006429B8 /* Extensions */,
 				E57CE7C62410CDE5006429B8 /* Cells */,
 				E57CE7C32410CCE6006429B8 /* Models */,
 				E57CE7B32410CB8B006429B8 /* Controllers */,
@@ -249,22 +246,6 @@
 				E57CE7C92410CE66006429B8 /* DashboardCell.swift */,
 			);
 			path = DashboardCell;
-			sourceTree = "<group>";
-		};
-		E57CE7CB2410E4A9006429B8 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E57CE7CC2410E4B2006429B8 /* UIView */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E57CE7CC2410E4B2006429B8 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				E57CE7CD2410E4C3006429B8 /* UIView+Extension.swift */,
-			);
-			path = UIView;
 			sourceTree = "<group>";
 		};
 		E57CE7CF241111F4006429B8 /* NetworkManager */ = {
@@ -539,7 +520,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E57CE7BF2410CBAF006429B8 /* DashboardViewController.swift in Sources */,
-				E57CE7CE2410E4C3006429B8 /* UIView+Extension.swift in Sources */,
 				E57CE7BB2410CBAF006429B8 /* DashboardPresenter.swift in Sources */,
 				E5A1592E24120E7F006CD076 /* Constant.swift in Sources */,
 				E57CE7D124111233006429B8 /* POCNetworkManager.swift in Sources */,

@@ -15,7 +15,7 @@ import UIKit
 protocol DashboardPresentationLogic
 {
     func presentSomething(response: Dashboard.Something.Response)
-    func presentDashboardData(_ dashboardArr : DashboardModel)
+    func presentDashboardData(_ dashboardDict : DashboardModel)
 }
 
 class DashboardPresenter: DashboardPresentationLogic
@@ -30,7 +30,7 @@ class DashboardPresenter: DashboardPresentationLogic
         viewController?.displaySomething(viewModel: viewModel)
     }
     
-    func presentDashboardData(_ dashboardArr : DashboardModel) {
-        viewController?.displayDashboardData(dashboardArr)
+    func presentDashboardData(_ dashboardDict : DashboardModel) {
+        viewController?.displayDashboardData(dashboardDict)
     }
 }

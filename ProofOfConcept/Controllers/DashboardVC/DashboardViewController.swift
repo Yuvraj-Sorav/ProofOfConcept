@@ -87,19 +87,18 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic
     }
     
     
-    func configureTableView() {
+    private func configureTableView() {
         tableview.dataSource = self
         tableview.rowHeight = UITableView.automaticDimension
         tableview.estimatedRowHeight = 80.0
         tableview.register(DashboardCell.self, forCellReuseIdentifier: dashboardReuseIdentifier)
         view.addSubview(tableview)
-        
         tableview.translatesAutoresizingMaskIntoConstraints = false
         tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableview.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableview.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
         
     }
     // MARK: Do something
@@ -117,11 +116,11 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic
         //nameTextField.text = viewModel.name
     }
     
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+    @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
         setUpInitials()
     }
     
-    func setUpInitials() {
+    private func setUpInitials() {
         tableview.refreshControl = refreshControl
         interactor?.doFetchDashBoardData()
     }
@@ -135,35 +134,3 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic
         }
     }
 }
-
-
-
-
-//extension UIImageView {
-//
-//    func loadImage(urlString: String) {
-//
-//        if let cacheImage = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
-//            self.image = cacheImage
-//            return
-//        }
-//
-//        guard let url = URL(string: urlString) else { return }
-//
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            if let error = error {
-//                print("Couldn't download image: ", error)
-//                return
-//            }
-//
-//            guard let data = data else { return }
-//            let image = UIImage(data: data)
-//            imageCache.setObject(image, forKey: urlString as AnyObject)
-//
-//            DispatchQueue.main.async {
-//                self.image = image
-//            }
-//        }.resume()
-//
-//    }
-//}
