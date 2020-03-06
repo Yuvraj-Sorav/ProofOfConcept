@@ -12,8 +12,6 @@
 
 import UIKit
 
-
-
 protocol DashboardDisplayLogic: class
 {
     func displaySomething(viewModel: Dashboard.Something.ViewModel)
@@ -76,7 +74,7 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: .valueChanged)
-        refreshControl.tintColor = .red
+        refreshControl.tintColor = .black
         return refreshControl
     }()
     
@@ -120,19 +118,52 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        
+        setUpInitials()
     }
     
     func setUpInitials() {
+        tableview.refreshControl = refreshControl
         interactor?.doFetchDashBoardData()
     }
     
     func displayDashboardData(_ dashboardDataModel: DashboardModel) {
         dashboardModel = dashboardDataModel
-
         DispatchQueue.main.async {
             self.title = dashboardDataModel.title
             self.tableview.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
 }
+
+
+
+
+//extension UIImageView {
+//
+//    func loadImage(urlString: String) {
+//
+//        if let cacheImage = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+//            self.image = cacheImage
+//            return
+//        }
+//
+//        guard let url = URL(string: urlString) else { return }
+//
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if let error = error {
+//                print("Couldn't download image: ", error)
+//                return
+//            }
+//
+//            guard let data = data else { return }
+//            let image = UIImage(data: data)
+//            imageCache.setObject(image, forKey: urlString as AnyObject)
+//
+//            DispatchQueue.main.async {
+//                self.image = image
+//            }
+//        }.resume()
+//
+//    }
+//}

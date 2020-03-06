@@ -16,6 +16,7 @@ enum NetworkError: Error {
 class POCNetworkManager {
     
     static let sharedManager = POCNetworkManager()
+    static let imageCache = NSCache<AnyObject, UIImage>()
     
     func makeGetRequest(urlString: String, completion:@escaping (Result<Data,NetworkError>) -> Void){
 
@@ -39,5 +40,23 @@ class POCNetworkManager {
             }
             completion(.success(dataUTF8))
         }.resume()
+    }
+    
+    func downloadImage(url: URL, completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
+        if let cachedImage = POCNetworkManager.imageCache.object(forKey: url.absoluteString as NSString) {
+            completion(cachedImage, nil)
+        } else {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let error = error {
+                    completion(nil, error)
+                    
+                } else if let urlData = data, let image = UIImage(data: urlData) {
+                    POCNetworkManager.imageCache.setObject(image, forKey: url.absoluteString as AnyObject)
+                    completion(image, nil)
+                } else {
+                    completion(nil, NetworkError.domainError)
+                }
+            }.resume()
+        }
     }
 }

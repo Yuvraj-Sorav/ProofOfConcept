@@ -20,7 +20,7 @@ class DashboardWorker
     }
     
     func doFetchDashboardData(completionHandler: @escaping(Data) -> Void) {
-        let urlStr = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+        let urlStr = UrlConstant.kFacts
         POCNetworkManager.sharedManager.makeGetRequest(urlString: urlStr) { (result) in
             switch result {
             case .success(let data):
