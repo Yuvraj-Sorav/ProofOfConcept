@@ -7,6 +7,7 @@ target 'ProofOfConcept' do
 
   # Pods for ProofOfConcept
   pod 'SVProgressHUD'
+  pod 'Alamofire'
 
   target 'ProofOfConceptTests' do
     inherit! :search_paths

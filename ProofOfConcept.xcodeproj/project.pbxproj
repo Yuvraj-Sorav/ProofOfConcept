@@ -29,6 +29,7 @@
 		E57CE7D124111233006429B8 /* POCNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7D024111233006429B8 /* POCNetworkManager.swift */; };
 		E57CE7D3241129E0006429B8 /* DashboardRowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CE7D2241129E0006429B8 /* DashboardRowsModel.swift */; };
 		E5A1592E24120E7F006CD076 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1592D24120E7F006CD076 /* Constant.swift */; };
+		E5A1593224124F04006CD076 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1593124124F04006CD076 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		E57CE7D024111233006429B8 /* POCNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCNetworkManager.swift; sourceTree = "<group>"; };
 		E57CE7D2241129E0006429B8 /* DashboardRowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRowsModel.swift; sourceTree = "<group>"; };
 		E5A1592D24120E7F006CD076 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E5A1593124124F04006CD076 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		EA7060F6FE68E3B20DF43104 /* Pods-ProofOfConcept.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProofOfConcept.release.xcconfig"; path = "Target Support Files/Pods-ProofOfConcept/Pods-ProofOfConcept.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E57CE7D024111233006429B8 /* POCNetworkManager.swift */,
+				E5A1593124124F04006CD076 /* Reachability.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				E57CE7832410CA60006429B8 /* SceneDelegate.swift in Sources */,
 				E57CE7CA2410CE66006429B8 /* DashboardCell.swift in Sources */,
 				E57CE7C22410CCAF006429B8 /* DashboardViewController+UITableViewDataSource.swift in Sources */,
+				E5A1593224124F04006CD076 /* Reachability.swift in Sources */,
 				E57CE7D3241129E0006429B8 /* DashboardRowsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

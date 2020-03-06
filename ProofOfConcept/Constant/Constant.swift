@@ -16,3 +16,7 @@ struct Font {
     static let kSystemMedium = "System-Medium"
     static let kSystemBold = "System-Bold"
 }
+
+struct ConstantMessage {
+    static let noInternetMessage = "Please check your Internet Connection."
+}

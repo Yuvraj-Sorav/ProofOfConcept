@@ -41,15 +41,18 @@ class DashboardInteractor: DashboardBusinessLogic, DashboardDataStore
     }
     
     func doFetchDashBoardData() {
-        worker?.doFetchDashboardData(completionHandler: { (dashboardModel) in
-            do {
-                let dashboardMod = try JSONDecoder().decode(DashboardModel.self, from: dashboardModel)
-                self.presenter?.presentDashboardData(dashboardMod)
-                
-            }catch {
-                print("Parsing Error \(error.localizedDescription)")
-            }
-        })
-        
+        if Reachability.checkInternetConnection() {
+            worker?.doFetchDashboardData(completionHandler: { (dashboardModel) in
+                do {
+                    let dashboardMod = try JSONDecoder().decode(DashboardModel.self, from: dashboardModel)
+                    self.presenter?.presentDashboardData(dashboardMod)
+                    
+                }catch {
+                    print("Parsing Error \(error.localizedDescription)")
+                }
+            })
+        }else {
+            print(ConstantMessage.noInternetMessage)
+        }
     }
 }
