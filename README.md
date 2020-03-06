@@ -21,5 +21,6 @@ Development Environment:
 
 Structure of code.
 Dashboard Implementation.
+Network Manager.
 
 
