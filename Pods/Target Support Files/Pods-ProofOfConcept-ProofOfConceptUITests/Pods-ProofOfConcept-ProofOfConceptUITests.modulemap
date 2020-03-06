@@ -1,0 +1,6 @@
+framework module Pods_ProofOfConcept_ProofOfConceptUITests {
+  umbrella header "Pods-ProofOfConcept-ProofOfConceptUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
